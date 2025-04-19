@@ -140,10 +140,7 @@ export default function Sidebar({ isOpen, onToggle, onDragStart }) {
         value2: "12m",
         label2: "Avg. Time",
       },
-    },
-    
-  ];
-
+    }, ]
   // Filter widgets based on search and category
   const filteredWidgets = widgetTemplates.filter((widget) => {
     const matchesSearch =
