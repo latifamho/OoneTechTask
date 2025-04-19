@@ -145,7 +145,7 @@ export default function DashboardLayout() {
                   className={`p-4 flex justify-end  gap-8 transition-all w-full
                 `}
                 >
-                  <div className={`flex items-center   gap-5`}>
+                  <div className={`flex items-center h-[31px]   gap-5`}>
                     <div
                       onClick={() => {
                         const matchingWidgets = findWidgetsWithSameId(
