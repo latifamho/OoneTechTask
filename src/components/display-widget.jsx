@@ -17,15 +17,15 @@ const DisplayWidget = ({ content, size, position }) => {
       position={{ x: currentPosition.x, y: currentPosition.y }}
     >
       <div
-        className={`"ring-2 w-full border border-gray-200 h-fit   bg-white rounded-lg shadow-sm relative`}
+        className={`"ring-2 w-full border text-subtitle border-gray-200 h-fit   bg-white rounded-lg shadow-sm relative`}
       >
         {/* Widget header/drag handle */}
         <div className="  w-full h-8   flex items-center justify-between px-3 py-1 bg-gray-50 rounded-t-lg">
-          <span className="text-xs font-medium text-gray-700 truncate">
+          <span className="text-xs font-medium text-text truncate">
             {content.title}
           </span>
           <div className="flex items-center space-x-1">
-            <MoreVertical size={14} className="text-gray-400" />
+            <MoreVertical size={14} className="text-second" />
           </div>
         </div>
 

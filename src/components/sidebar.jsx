@@ -3,7 +3,7 @@ import { useDrag } from "react-dnd";
 import { LayoutGrid, BarChart3, ImageIcon, FileText } from "lucide-react";
 import { IoClose } from "react-icons/io5";
 import { Input } from "./input";
-import { useForm } from "react-hook-form"; 
+import { useForm } from "react-hook-form";
 const WIDGET_TYPE = "WIDGET";
 
 function DraggableWidgetItem({ widget, onDragStart }) {
@@ -36,17 +36,15 @@ function DraggableWidgetItem({ widget, onDragStart }) {
       style={{ touchAction: "none" }}
     >
       <div className="flex gap-2 p-3 rounded-lg border border-gray-200 bg-white  hover:shadow-sm transition-all">
-        <div className="w-12 h-12 flex items-center justify-center rounded bg-gray-100 text-gray-500">
+        <div className="w-12 h-12 flex items-center justify-center rounded bg-gray-100 text-subtitle">
           {widget.type === "text" && <FileText size={20} />}
           {widget.type === "chart" && <BarChart3 size={20} />}
           {widget.type === "stats" && <LayoutGrid size={20} />}
           {widget.type === "image" && <ImageIcon size={20} />}
         </div>
         <div className="flex-1">
-          <h3 className="text-xs font-semibold text-gray-800">
-            {widget.title}
-          </h3>
-          <p className="text-xs text-gray-500 mt-1 line-clamp-2">
+          <h3 className="text-xs font-bold text-subtitle">{widget.title}</h3>
+          <p className="text-xs text-text mt-1 line-clamp-2">
             {widget.description}
           </p>
           <div className="mt-1 inline-block bg-gray-100 text-gray-600 text-[10px] px-1.5 py-0.5 rounded-full">
@@ -67,7 +65,8 @@ export default function Sidebar({ isOpen, onToggle, onDragStart }) {
     {
       id: "text-widget",
       title: "Text Widget",
-      description: "Display text content, paragraphs, and headings",
+      description:
+        "Display text content, paragraphs, and headings ,Display text content, paragraphs, and headings",
       type: "text",
       category: "Content",
       data: {
@@ -79,7 +78,8 @@ export default function Sidebar({ isOpen, onToggle, onDragStart }) {
     {
       id: "bar-chart",
       title: "Bar Chart",
-      description: "Visualize data with a bar chart",
+      description:
+        "Visualize data with a bar chart,Visualize data with a bar chart",
       type: "chart",
       category: "Analytics",
       data: {
@@ -90,7 +90,8 @@ export default function Sidebar({ isOpen, onToggle, onDragStart }) {
     {
       id: "line-chart",
       title: "Line Chart",
-      description: "Track trends with a line chart",
+      description:
+        "Track trends with a line chart, Track trends with a line chart",
       type: "chart",
       category: "Analytics",
       data: {
@@ -101,7 +102,7 @@ export default function Sidebar({ isOpen, onToggle, onDragStart }) {
     {
       id: "stats-widget",
       title: "Statistics Widget",
-      description: "Display key metrics and KPIs",
+      description: "Display key metrics and KPIs,Display key metrics and KPIs",
       type: "stats",
       category: "Analytics",
       data: {
@@ -115,7 +116,8 @@ export default function Sidebar({ isOpen, onToggle, onDragStart }) {
     {
       id: "image-widget",
       title: "Image Widget",
-      description: "Display images with optional captions",
+      description:
+        "Display images with optional captions, Display images with optional captions",
       type: "image",
       category: "Media",
       data: {
@@ -127,7 +129,8 @@ export default function Sidebar({ isOpen, onToggle, onDragStart }) {
     {
       id: "user-stats",
       title: "User Statistics",
-      description: "Show user engagement metrics",
+      description:
+        "Show user engagement metrics , Show user engagement metrics",
       type: "stats",
       category: "Analytics",
       data: {
@@ -190,7 +193,7 @@ export default function Sidebar({ isOpen, onToggle, onDragStart }) {
     >
       {/* Sidebar header */}
       <div className="flex justify-between items-center p-4   border-gray-200">
-        <h2 className="text-sm font-semibold text-gray-800">Add Widget</h2>
+        <h2 className="text-sm font-semibold text-subtitle">Add Widget</h2>
         <button
           onClick={onToggle}
           className="p-1 rounded-full "
@@ -203,7 +206,7 @@ export default function Sidebar({ isOpen, onToggle, onDragStart }) {
         <p className=" text-[10px]  cursor-pointer border-b-2 border-border p-2 text-first font-semibold">
           Templates
         </p>
-        <p className=" text-[10px]  cursor-pointer font-semibold text-text">
+        <p className=" text-[10px]  cursor-pointer font-semibold text-text transition-all hover:border-b-2 hover:border-border p-2 hover:text-first">
           Drafts
         </p>
       </div>
