@@ -141,6 +141,7 @@ export default function Sidebar({ isOpen, onToggle, onDragStart }) {
         label2: "Avg. Time",
       },
     },
+    
   ];
 
   // Filter widgets based on search and category
