@@ -126,11 +126,8 @@ export default function DashboardLayout() {
     },
     [draggedItem, handleAddWidget]
   );
-
-  const findWidgetsWithSameId = (widgets, previousWidgets) => {
-    return previousWidgets.filter((currentWidget) => {
-      return widgets.some((prevWidget) => prevWidget.id === currentWidget.id);
-    });
+  const getAllPreviousWidgets = (widgets, previousWidgets) => {
+    return previousWidgets;
   };
   return (
     <div className=" flex">
@@ -148,7 +145,7 @@ export default function DashboardLayout() {
                   <div className={`flex items-center h-[31px]   gap-5`}>
                     <div
                       onClick={() => {
-                        const matchingWidgets = findWidgetsWithSameId(
+                        const matchingWidgets = getAllPreviousWidgets(
                           widgets,
                           previousWidgets
                         );
