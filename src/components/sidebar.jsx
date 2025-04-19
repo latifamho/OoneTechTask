@@ -141,6 +141,36 @@ export default function Sidebar({ isOpen, onToggle, onDragStart }) {
         label2: "Avg. Time",
       },
     },
+    {
+      id: "user-stats",
+      title: "User Statistics",
+      description:
+        "Show user engagement metrics , Show user engagement metrics",
+      type: "stats",
+      category: "Analytics",
+      data: {
+        title: "User Engagement",
+        value1: "5.2k",
+        label1: "Active Users",
+        value2: "12m",
+        label2: "Avg. Time",
+      },
+    },
+    {
+      id: "user-stats",
+      title: "User Statistics",
+      description:
+        "Show user engagement metrics , Show user engagement metrics",
+      type: "stats",
+      category: "Analytics",
+      data: {
+        title: "User Engagement",
+        value1: "5.2k",
+        label1: "Active Users",
+        value2: "12m",
+        label2: "Avg. Time",
+      },
+    },
   ];
 
   // Filter widgets based on search and category
